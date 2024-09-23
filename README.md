@@ -22,3 +22,13 @@ A codificação posicional fixa pode ser desnecessária em algumas situações p
 
 Em um modelo de tradução, como o analisado, o uso de codificação posicional pode trazer vantagens justamente pela ordem das palavras ser importante.
 
+## Implementação fiel à arquitetura
+
+Um ponto positivo dessa implementação é que ela segue exatamente a arquitetura padrão de um decoder em um modelo transformer, incluindo componentes essenciais como a atenção multi-cabeças e as camadas de feed-forward. Isso facilita a compreensão do fluxo de dados, ajudando no aprendizado.
+
+## Implementação com erros
+
+Por outro lado, um ponto negativo é que a implementação não inclui tratamento de exceções ou validações adicionais para entradas inesperadas. Por exemplo, se forem fornecidos valores nulos ou formatos de dados incorretos, o código pode não lidar adequadamente com esses casos. Adicionar verificações e tratamentos de erro poderia tornar a implementação mais robusta e confiável em diferentes cenários.
+
+Por exemplo, na implementação das camadas de codificação e decodificação, foram encontrados erros por conta da tipagem dos parâmetros passados para os métodos das classes.
+
